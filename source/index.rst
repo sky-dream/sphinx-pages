@@ -8,6 +8,7 @@ Documentation of sphinx-pages GitHub Action
    :caption: Getting Started:
 
    reposettings
+   examples/design
    examples/workflow
    examples/sphinxproject
    examples/sparatebranch
