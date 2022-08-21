@@ -109,10 +109,11 @@ fi
 
 # git config
 echo ::group::Set commiter
-echo "git config user.name $author_name"
+echo "git config --global user.name $author_name"
 git config user.name $author_name
-echo "git config user.email $author_email"
+echo "git config --global user.email $author_email"
 git config user.email $author_email
+curl -H 'Authorization: token <MYTOKEN>' https://github.com/sky-dream/sphinx-pages.git
 echo ::endgroup::
 
 
@@ -146,5 +147,9 @@ git add .
 echo 'git commit --allow-empty -m "From $GITHUB_REF $docs_sha8"'
 git commit --allow-empty -m "From $GITHUB_REF $docs_sha8"
 echo "git push origin gh-pages"
-git push origin gh-pages
+echo "GITHUB_ACTOR : $GITHUB_ACTOR"
+echo "INPUT_GITHUB_TOKEN : $INPUT_GITHUB_TOKEN"
+echo "GITHUB_REPOSITORY : $GITHUB_REPOSITORY"
+git push origin gh-pages https://$GITHUB_ACTOR:$INPUT_GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git
+
 echo ::endgroup::
