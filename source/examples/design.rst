@@ -22,3 +22,4 @@ sphinx page demo.
     add some changed 17th time.
     add some changed 18th time.
     add some changed 19th time.try git remote set-url approach.
+    add some changed 20th time.revert remote add origin.
