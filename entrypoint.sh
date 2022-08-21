@@ -103,7 +103,13 @@ echo ::endgroup::
 if [ "$INPUT_INSTALL_EXTENSIONS" = true ] ; then
     echo ::group::Installing sphinx extensions
     echo "pip3 install -r $docs_src/requirements.txt"
-    pip3 install -r $docs_src/requirements.txt
+    echo "ls -l /github/workspace/docs"
+    ls -l /github/workspace/docs
+    echo "pwd"
+    pwd
+    echo "ls -l"
+    ls -l   
+    pip3 install -r requirements.txt
     echo ::endgroup::
 fi
 
