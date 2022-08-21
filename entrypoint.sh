@@ -74,8 +74,16 @@ echo "cd $docs_html"
 cd $docs_html
 echo "git init"
 git init
-echo "git remote add origin https://github.com/$GITHUB_REPOSITORY.git"
-git remote add origin https://$GITHUB_ACTOR:$INPUT_GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git
+#git remote add origin https:<access__token>://@github.com/<username>/<repo__name>.git
+#git push https://<access__token>@github.com/<username>/<repo__name>.git
+echo "GITHUB_ACTOR : $GITHUB_ACTOR"
+echo "INPUT_GITHUB_TOKEN : $INPUT_GITHUB_TOKEN"
+echo "GITHUB_REPOSITORY : $GITHUB_REPOSITORY"
+#echo "git remote add origin https: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://@github.com/sky-dream/sphinx-pages.git"
+#git remote add origin https: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://@github.com/sky-dream/sphinx-pages.git
+
+echo "git remote add origin https://$GITHUB_ACTOR:$INPUT_GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git"
+git remote add origin https://$GITHUB_ACTOR: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@github.com/$GITHUB_REPOSITORY.git
 echo ::endgroup::
 
 # check remote branch exist first
@@ -149,20 +157,8 @@ echo "git add ."
 git add .
 echo 'git commit --allow-empty -m "From $GITHUB_REF $docs_sha8"'
 git commit --allow-empty -m "From $GITHUB_REF $docs_sha8"
-echo "git push origin gh-pages"
-echo "GITHUB_ACTOR : $GITHUB_ACTOR"
-echo "INPUT_GITHUB_TOKEN : $INPUT_GITHUB_TOKEN"
-echo "GITHUB_REPOSITORY : $GITHUB_REPOSITORY"
-#git remote add origin https:<access__token>://@github.com/<username>/<repo__name>.git
-#git push https://<access__token>@github.com/<username>/<repo__name>.git
-echo "git remote remove origin"
-git remote remove origin
-echo "git remote add origin https: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://@github.com/sky-dream/sphinx-pages.git"
-git remote add origin https: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://@github.com/sky-dream/sphinx-pages.git
 echo "git show-ref"
 git show-ref
 echo "git push -fq origin gh-pages"
 git push -fq origin gh-pages 
-# git push -fq origin gh-pages
-
 echo ::endgroup::
