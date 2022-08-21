@@ -8,6 +8,6 @@ jobs:
       - uses: sky-dream/sphinx-pages@master
         id: sphinx-pages
         with:
-          github_token: ${{ secrets.SPHINX_PAGES }}
+          github_token: ${{ secrets.SPHINX_PAGES_SECRET }}
           create_readme: true
 
