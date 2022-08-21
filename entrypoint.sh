@@ -79,11 +79,9 @@ git init
 echo "GITHUB_ACTOR : $GITHUB_ACTOR"
 echo "INPUT_GITHUB_TOKEN : $INPUT_GITHUB_TOKEN"
 echo "GITHUB_REPOSITORY : $GITHUB_REPOSITORY"
-#echo "git remote add origin https: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://@github.com/sky-dream/sphinx-pages.git"
-#git remote add origin https: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://@github.com/sky-dream/sphinx-pages.git
 
 echo "git remote add origin https://$GITHUB_ACTOR:$INPUT_GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git"
-git remote add origin https://$GITHUB_ACTOR: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@github.com/$GITHUB_REPOSITORY.git
+git remote add origin https://$GITHUB_ACTOR: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@github.com/$GITHUB_REPOSITORY.git
 echo ::endgroup::
 
 # check remote branch exist first
