@@ -110,10 +110,10 @@ fi
 # git config
 echo ::group::Set commiter
 echo "git config --global user.name $author_name"
-git config user.name $author_name
+git config --global user.name $author_name
 echo "git config --global user.email $author_email"
-git config user.email $author_email
-curl -H 'Authorization: token <MYTOKEN>' https://github.com/sky-dream/sphinx-pages.git
+git config --global user.email $author_email
+
 echo ::endgroup::
 
 
