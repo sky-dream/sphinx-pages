@@ -157,8 +157,8 @@ echo "GITHUB_REPOSITORY : $GITHUB_REPOSITORY"
 #git push https://<access__token>@github.com/<username>/<repo__name>.git
 echo "git remote remove origin"
 git remote remove origin
-echo "git remote add origin https://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@github.com/sky-dream/sphinx-pages.git"
-git remote add origin https://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@github.com/sky-dream/sphinx-pages.git
+echo "git remote add origin https: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://@github.com/sky-dream/sphinx-pages.git"
+git remote add origin https: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://@github.com/sky-dream/sphinx-pages.git
 echo "git show-ref"
 git show-ref
 echo "git push -fq origin gh-pages"
