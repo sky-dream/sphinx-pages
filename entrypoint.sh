@@ -80,8 +80,9 @@ echo "GITHUB_ACTOR : $GITHUB_ACTOR"
 echo "INPUT_GITHUB_TOKEN : $INPUT_GITHUB_TOKEN"
 echo "GITHUB_REPOSITORY : $GITHUB_REPOSITORY"
 
-echo "git remote add origin https://$GITHUB_ACTOR:$INPUT_GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git"
-git remote add origin https://$GITHUB_ACTOR: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@github.com/$GITHUB_REPOSITORY.git
+echo "git remote set-url origin https://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@github.com/$GITHUB_REPOSITORY.git"
+git remote set-url origin https://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@github.com/$GITHUB_REPOSITORY.git
+#git remote add origin https://$GITHUB_ACTOR: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@github.com/$GITHUB_REPOSITORY.git
 echo ::endgroup::
 
 # check remote branch exist first
