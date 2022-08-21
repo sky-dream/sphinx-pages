@@ -1,7 +1,7 @@
 FROM sphinxdoc/sphinx
 
-WORKDIR /docs
-COPY requirements.txt /docs
+WORKDIR /github/workspace/docs
+COPY requirements.txt /github/workspace/docs
 RUN pip3 install -r requirements.txt
 
 RUN apt-get update \
