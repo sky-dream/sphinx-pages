@@ -109,10 +109,10 @@ fi
 
 # git config
 echo ::group::Set commiter
-echo "git config --global user.name $author_name"
-git config --global user.name $author_name
-echo "git config --global user.email $author_email"
-git config --global user.email $author_email
+echo "git config --global user.name 'sky-dream' "
+git config --global user.name "sky-dream"
+echo "git config --global user.email 'xxm1263476788@126.com' "
+git config --global user.email "xxm1263476788@126.com"
 
 echo ::endgroup::
 
