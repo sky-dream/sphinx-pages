@@ -24,3 +24,4 @@ sphinx page demo.
     add some changed 19th time.try git remote set-url approach.
     add some changed 20th time.revert remote add origin.
     add some changed 21th time.add username: for token.
+    add some changed 22th time. update all the token.
