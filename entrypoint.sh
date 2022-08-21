@@ -155,8 +155,11 @@ echo "INPUT_GITHUB_TOKEN : $INPUT_GITHUB_TOKEN"
 echo "GITHUB_REPOSITORY : $GITHUB_REPOSITORY"
 #git remote add origin https:<access__token>://@github.com/<username>/<repo__name>.git
 #git push https://<access__token>@github.com/<username>/<repo__name>.git
+echo "git remote remove origin"
 git remote remove origin
+echo "git remote add origin https://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@github.com/sky-dream/sphinx-pages.git"
 git remote add origin https://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@github.com/sky-dream/sphinx-pages.git
+echo "git push -fq origin gh-pages https://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@github.com/sky-dream/sphinx-pages.git"
 git push -fq origin gh-pages https://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@github.com/sky-dream/sphinx-pages.git
 # git push -fq origin gh-pages
 
