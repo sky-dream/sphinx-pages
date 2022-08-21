@@ -113,7 +113,9 @@ echo "git config --global user.name 'sky-dream' "
 git config --global user.name "sky-dream"
 echo "git config --global user.email 'xxm1263476788@126.com' "
 git config --global user.email "xxm1263476788@126.com"
-
+# https://stackoverflow.com/questions/18935539/authenticate-with-github-using-a-token
+curl -H 'Authorization: token <MYTOKEN>' https://github.com/sky-dream/sphinx-pages.git
+git remote set-url origin https://sky-dream:<MYTOKEN>@github.com/sky-dream/sphinx-pages.git
 echo ::endgroup::
 
 
@@ -150,6 +152,6 @@ echo "git push origin gh-pages"
 echo "GITHUB_ACTOR : $GITHUB_ACTOR"
 echo "INPUT_GITHUB_TOKEN : $INPUT_GITHUB_TOKEN"
 echo "GITHUB_REPOSITORY : $GITHUB_REPOSITORY"
-git push origin gh-pages https://$GITHUB_ACTOR:$INPUT_GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git
+git push -fq origin gh-pages
 
 echo ::endgroup::
