@@ -20,6 +20,22 @@ echo "mkdir $sphinx_doctree"
 mkdir $sphinx_doctree
 echo ::endgroup::
 
+# sphinx extensions
+# sphinx extensions pip lib install is finished in the docker file command, 
+# move forward to avoid that requirements.txt is overwrite by the git init.
+if [ "$INPUT_INSTALL_EXTENSIONS" = true  ] ; then
+    echo ::group::Installing sphinx extensions
+    echo "pip3 install -r $docs_src/requirements.txt"
+    echo "ls -l /github/workspace/docs"
+    ls -l /github/workspace/docs
+    echo "pwd"
+    pwd
+    echo "ls -l"
+    ls -l   
+    # pip3 install -r requirements.txt
+    echo ::endgroup::
+fi
+
 # checkout branch docs
 echo ::group::Initializing the repository
 echo "cd $docs_src"
@@ -99,19 +115,6 @@ echo "git config user.email $author_email"
 git config user.email $author_email
 echo ::endgroup::
 
-# sphinx extensions
-if [ "$INPUT_INSTALL_EXTENSIONS" = true ] ; then
-    echo ::group::Installing sphinx extensions
-    echo "pip3 install -r $docs_src/requirements.txt"
-    echo "ls -l /github/workspace/docs"
-    ls -l /github/workspace/docs
-    echo "pwd"
-    pwd
-    echo "ls -l"
-    ls -l   
-    pip3 install -r requirements.txt
-    echo ::endgroup::
-fi
 
 # sphinx-build
 echo ::group::Sphinx build html
