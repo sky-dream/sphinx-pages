@@ -42,8 +42,8 @@ echo "cd $docs_src"
 cd $docs_src
 echo "git init"
 git init
-echo "git remote add origin https://github.com/$GITHUB_REPOSITORY.git"
-git remote add origin https://$GITHUB_ACTOR:$INPUT_GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git
+echo "git remote add origin https://sky-dream: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github.com/$GITHUB_REPOSITORY.git"
+git remote add origin https://sky-dream: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@github.com/$GITHUB_REPOSITORY.git
 echo ::endgroup::
 echo ::group::Fetching the repository
 echo "git fetch origin +$GITHUB_SHA:refs/remotes/origin/docs"
@@ -77,7 +77,7 @@ git init
 #git remote add origin https:<access__token>://@github.com/<username>/<repo__name>.git
 #git push https://<access__token>@github.com/<username>/<repo__name>.git
 echo "GITHUB_ACTOR : $GITHUB_ACTOR"
-echo "INPUT_GITHUB_TOKEN : $INPUT_GITHUB_TOKEN"
+echo "INPUT_GITHUB_TOKEN : sky-dream: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"
 echo "GITHUB_REPOSITORY : $GITHUB_REPOSITORY"
 echo "git remote add origin https://$GITHUB_ACTOR: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@github.com/$GITHUB_REPOSITORY.git"
 git remote add origin https://sky-dream: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@github.com/$GITHUB_REPOSITORY.git
