@@ -46,4 +46,4 @@ To build GitHub Pages from branch `docs`, put `example-sphinx.yml` to branch `do
 
 ## Self Example
 
-See [https://seanzhengw.github.io/sphinx-pages](https://seanzhengw.github.io/sphinx-pages/), it from branch [example](https://github.com/seanzhengw/sphinx-pages/tree/example).
+See [https://sky-dream.github.io/sphinx-pages/](https://sky-dream.github.io/sphinx-pages/), it from branch [example](https://github.com/sky-dream/sphinx-pages/tree/example).
