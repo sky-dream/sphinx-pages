@@ -20,8 +20,8 @@
 # -- Project information -----------------------------------------------------
 
 project = u'Sphinx Page GitHub Action'
-copyright = u'2019, Sean Zheng'
-author = u'Sean Zheng'
+copyright = u'2022, Sky-Dream'
+author = u'Sky-Dream'
 
 # The short X.Y version
 version = u''
