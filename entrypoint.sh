@@ -42,8 +42,8 @@ echo "cd $docs_src"
 cd $docs_src
 echo "git init"
 git init
-echo "git remote add origin https://sky-dream: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github.com/$GITHUB_REPOSITORY.git"
-git remote add origin https://sky-dream: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@github.com/$GITHUB_REPOSITORY.git
+echo "git remote add origin https://oauth2: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github.com/$GITHUB_REPOSITORY.git"
+git remote add origin https://oauth2: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@github.com/$GITHUB_REPOSITORY.git
 echo ::endgroup::
 echo ::group::Fetching the repository
 echo "git fetch origin +$GITHUB_SHA:refs/remotes/origin/docs"
@@ -68,6 +68,13 @@ echo "::set-output name=email::"$author_email""
 echo "::set-output name=docs_sha::$(echo ${GITHUB_SHA})"
 echo "::set-output name=docs_sha8::"$docs_sha8""
 
+# git config Set commiter
+echo ::group::Set commiter
+echo "git config --global user.name 'sky-dream' "
+git config --global user.name "sky-dream"
+echo "git config --global user.email 'xxm1263476788@126.com' "
+git config --global user.email "xxm1263476788@126.com"
+
 # checkout branch gh-pages
 echo ::group::Initializing branch gh-pages
 echo "cd $docs_html"
@@ -79,11 +86,11 @@ git init
 echo "GITHUB_ACTOR : $GITHUB_ACTOR"
 echo "INPUT_GITHUB_TOKEN : sky-dream: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"
 echo "GITHUB_REPOSITORY : $GITHUB_REPOSITORY"
-echo "git remote add origin https://$GITHUB_ACTOR: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@github.com/$GITHUB_REPOSITORY.git"
-git remote add origin https://sky-dream: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@github.com/$GITHUB_REPOSITORY.git
+echo "git remote add origin https://oauth2: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@github.com/$GITHUB_REPOSITORY.git"
+git remote add origin https://oauth2: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@github.com/$GITHUB_REPOSITORY.git
 
-echo "git remote set-url origin https://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@github.com/$GITHUB_REPOSITORY.git"
-git remote set-url origin https://sky-dream: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@github.com/$GITHUB_REPOSITORY.git
+echo "git remote set-url origin https://oauth2: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@github.com/$GITHUB_REPOSITORY.git"
+git remote set-url origin https://oauth2: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@github.com/$GITHUB_REPOSITORY.git
 
 echo ::endgroup::
 
@@ -116,12 +123,7 @@ else
     echo ::endgroup::
 fi
 
-# git config Set commiter
-echo ::group::Set commiter
-echo "git config --global user.name 'sky-dream' "
-git config --global user.name "sky-dream"
-echo "git config --global user.email 'xxm1263476788@126.com' "
-git config --global user.email "xxm1263476788@126.com"
+
 
 # https://stackoverflow.com/questions/18935539/authenticate-with-github-using-a-token
 # curl -H 'Authorization: token <MYTOKEN>' https://github.com/sky-dream/sphinx-pages.git
