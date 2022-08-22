@@ -1,6 +1,10 @@
 sphinx page demo.
 ====================
 
+.. note:: new added pic.
+
+.. image:: ./github-start-project.png
+
 .. note:: design demo to generate the sphinx page with GitHub CI actions and show by GitHub Pages.
 
     update the readme, try to trigger the sphinx build for the github pages.
